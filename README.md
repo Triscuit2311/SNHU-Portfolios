@@ -1,5 +1,7 @@
 # SNHU-Portfolios
 
-Portfolio Links:
+##Portfolio Links:
 
-[a relative link](/CS300)
+###[CS-300-T1157](/CS300)
+
+###[CS-250-T1130](/CS250)
