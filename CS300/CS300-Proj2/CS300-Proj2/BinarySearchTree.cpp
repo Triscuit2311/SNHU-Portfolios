@@ -10,8 +10,9 @@
 #include "BinarySearchTree.h"
 #include <iostream>
 
+
 /**
- * Default constructor
+ * \brief Default constructor
  */
 BinarySearchTree::BinarySearchTree()
 {
@@ -19,13 +20,48 @@ BinarySearchTree::BinarySearchTree()
 	this->root_ = nullptr;
 }
 
+
 /**
- * Destructor
+ * \brief Destructor
  */
 BinarySearchTree::~BinarySearchTree()
 {
 	// initiate recursive delete
 	DeleteNodeRecursive(this->root_);
+}
+
+
+BinarySearchTree::BinarySearchTree(const BinarySearchTree& tree)
+{
+	this->root_ = tree.root_;
+}
+
+BinarySearchTree& BinarySearchTree::operator=(const BinarySearchTree& rhs)
+{
+	if (&rhs == this)
+		return *this;
+
+	DeleteNodeRecursive(this->root_);
+	this->root_ = rhs.root_;
+	return *this;
+}
+
+BinarySearchTree::BinarySearchTree(const BinarySearchTree&& tree) noexcept
+{
+	this->root_ = tree.root_;
+	tree.root_ = nullptr;
+}
+
+BinarySearchTree& BinarySearchTree::operator=(BinarySearchTree&& rhs) noexcept
+{
+	if (&rhs == this)
+		return *this;
+
+	DeleteNodeRecursive(this->root_);
+	this->root_ = rhs.root_;
+	rhs.root_ = nullptr;
+
+	return *this;
 }
 
 /**
@@ -38,23 +74,37 @@ void BinarySearchTree::Clear()
 }
 
 
+/**
+ * \brief ForEach Implementation for BST
+ * \param func Function to execute for each node in the tree
+ */
 void BinarySearchTree::ForEach(const std::function<void(Node*)>& func) const
 {
 	InOrderIteration(this->root_, func);
 }
 
+/**
+ * \brief Gets the size of the tree
+ * \return Number of nodes in the tree
+ */
 size_t BinarySearchTree::Size() const
 {
 	return this->size_;
 }
 
+/**
+ * \brief Checks if BST contains a course
+ * \param course_id ID to search for
+ * \return true if tree contains source with provided ID
+ */
 bool BinarySearchTree::Contains(const std::string& course_id) const
 {
 	return Search(course_id).CourseNo != "NONE";
 }
 
 /**
- * Insert a course
+ * \brief Inserts a new course into the tree
+ * \param course Course to insert
  */
 void BinarySearchTree::Insert(Course course)
 {
@@ -70,9 +120,7 @@ void BinarySearchTree::Insert(Course course)
 	this->size_++;
 }
 
-/**
- * Remove a course
- */
+
 void BinarySearchTree::Remove(const std::string& course_id)
 {
 	// Call private member function
@@ -80,9 +128,7 @@ void BinarySearchTree::Remove(const std::string& course_id)
 	this->size_--;
 }
 
-/**
- * Search for a course
- */
+
 Course BinarySearchTree::Search(const std::string& course_id) const
 {
 	// Set current node starting at root
@@ -118,23 +164,23 @@ void BinarySearchTree::Print(const Order order) const
 {
 	switch (order)
 	{
-	case Order::IN_ORDER:
+	case IN_ORDER:
 		InOrder(this->root_);
 		break;
-	case Order::PRE_ORDER:
+	case PRE_ORDER:
 		PreOrder(this->root_);
 		break;
-	case Order::POST_ORDER:
+	case POST_ORDER:
 		PostOrder(this->root_);
 		break;
 	}
 }
 
+
 /**
- * Add a course to some node (recursive)
- *
- * @param node Current node in tree
- * @param course to be added
+ * \brief Internal - Adds a node to any location
+ * \param node Node to start searching for location
+ * \param course Course to add
  */
 void BinarySearchTree::AddNode(Node* node, const Course& course)
 {
@@ -173,6 +219,11 @@ void BinarySearchTree::AddNode(Node* node, const Course& course)
 	}
 }
 
+/**
+ * \brief Performs some function recursively on child nodes.
+ * \param node Node to begin recursive iteration
+ * \param func Function to perform
+ */
 void BinarySearchTree::InOrderIteration(Node* node, const std::function<void(Node*)>& func)
 {
 	// If we reach a null node, do nothing
@@ -190,9 +241,14 @@ void BinarySearchTree::InOrderIteration(Node* node, const std::function<void(Nod
 	InOrderIteration(node->right, func);
 }
 
+/**
+ * \brief Removes a node from the tree
+ * \param node Node to begin search
+ * \param course_id ID of course to remove
+ * \return Pointer to course data
+ */
 Node* BinarySearchTree::RemoveNode(Node* node, const std::string& course_id)
 {
-
 	// Setup current and parent node pointers
 	auto current_node = node;
 	Node* parent_node = nullptr;
@@ -315,6 +371,10 @@ Node* BinarySearchTree::RemoveNode(Node* node, const std::string& course_id)
 	return {};
 }
 
+/**
+ * \brief Deletes nodes recursively, for deconstruction
+ * \param node node to start recursive calls
+ */
 void BinarySearchTree::DeleteNodeRecursive(const Node* node)
 {
 	if (node == nullptr)
@@ -324,6 +384,10 @@ void BinarySearchTree::DeleteNodeRecursive(const Node* node)
 	delete node;
 }
 
+/**
+ * \brief Prints nodes recursively, in order.
+ * \param node Node to start recursive calls
+ */
 void BinarySearchTree::InOrder(Node* node)
 {
 	// If we reach a null node, do nothing
@@ -341,6 +405,10 @@ void BinarySearchTree::InOrder(Node* node)
 	InOrder(node->right);
 }
 
+/**
+ * \brief Prints nodes recursively, in post-order.
+ * \param node Node to start recursive calls
+ */
 void BinarySearchTree::PostOrder(Node* node)
 {
 	// If we reach a null node, do nothing
@@ -358,6 +426,10 @@ void BinarySearchTree::PostOrder(Node* node)
 	node->course.Print();
 }
 
+/**
+ * \brief Prints nodes recursively, in pre-order.
+ * \param node Node to start recursive calls
+ */
 void BinarySearchTree::PreOrder(Node* node)
 {
 	// if we reach a null node, do nothing
@@ -374,4 +446,3 @@ void BinarySearchTree::PreOrder(Node* node)
 	// Recursive call right
 	InOrder(node->right);
 }
-

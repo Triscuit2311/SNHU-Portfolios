@@ -13,24 +13,26 @@
 #include "Course.h"
 
 
-struct Node {
-    Course course;
-    Node* left;
-    Node* right;
+// Define Node structure
+struct Node
+{
+	Course course;
+	Node* left;
+	Node* right;
 
-    Node()
-    {
-        this->course = Course();
-        left = nullptr;
-        right = nullptr;
-    }
+	Node()
+	{
+		this->course = Course();
+		left = nullptr;
+		right = nullptr;
+	}
 
-    explicit Node(Course course)
-    {
-	    this->left = nullptr;
-	    this->right = nullptr;
-	    this->course = std::move(course);
-    }
+	explicit Node(Course course)
+	{
+		this->left = nullptr;
+		this->right = nullptr;
+		this->course = std::move(course);
+	}
 };
 
 
@@ -46,21 +48,31 @@ public:
 
 	BinarySearchTree();
 	virtual ~BinarySearchTree();
-	void Clear();
+
+	// Copy Constructors
+	BinarySearchTree(const BinarySearchTree& tree);
+	BinarySearchTree& operator=(const BinarySearchTree& rhs);
+
+	// Move Constructors
+	BinarySearchTree(const BinarySearchTree&& tree) noexcept;
+	BinarySearchTree& operator=(BinarySearchTree&& rhs) noexcept;
 
 	// Essential Operations
 	void Insert(Course course);
 	void Remove(const std::string& course_id);
 	Course Search(const std::string& course_id) const;
 	void Print(Order order = IN_ORDER) const;
-	
+
 	// Helpful Extra Methods
 	size_t Size() const;
+	void Clear();
 	void ForEach(const std::function<void(Node*)>& func) const;
 	bool Contains(const std::string& course_id) const;
 
 private:
-	Node* root_;
+	// Mutable for assignment via move constructors
+	mutable Node* root_;
+
 	size_t size_ = 0;
 
 	Node* RemoveNode(Node* node, const std::string& course_id);

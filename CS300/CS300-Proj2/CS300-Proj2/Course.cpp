@@ -31,7 +31,6 @@ Course::Course(
 void Course::Print() const
 {
 	std::cout << this->CourseNo << ": " << this->Description << std::endl;
-
 }
 
 void Course::PrintPrerequisites() const
@@ -40,7 +39,8 @@ void Course::PrintPrerequisites() const
 		"\n\tDescription: " << this->Description <<
 		"\n\tPrerequisites: ";
 
-	if (Prerequisites.empty()) {
+	if (Prerequisites.empty())
+	{
 		std::cout << "None" << std::endl;
 		return;
 	}
