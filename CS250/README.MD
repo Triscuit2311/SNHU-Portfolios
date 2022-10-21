@@ -3,7 +3,7 @@
 ### Dante Trisciuzzi
 ### Prof. Cory THoma, Ph.D
 
-##[cs250-Final (Sprint review & retrospective)](https://github.com/Triscuit2311/SNHU-Portfolios/blob/main/CS250/Dante-Trisciuzzi-Final-Review-Retrospective.pdf)
+## [cs250-Final (Sprint review & retrospective)](https://github.com/Triscuit2311/SNHU-Portfolios/blob/main/CS250/Dante-Trisciuzzi-Final-Review-Retrospective.pdf)
 
 ## Q & A
 
