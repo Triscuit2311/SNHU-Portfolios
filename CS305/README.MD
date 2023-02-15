@@ -1,15 +1,17 @@
 
 ## CS-305 Portfolio
 ### Dante Trisciuzzi
-### Prof. Dr. Vivian Lyon , DIT, MBA, MBA, PMP, PMI-ACP, CISA, CISM, CRISC, CEH, CHFI, SEC+, AWS-CCP, AWS-CSA, CCSK, CSM, CSPO, CIGE, CMSC, ITILv4
+### Prof. Dr.Vivian Lyon, DIT, MBA, MBA, PMP, PMI-ACP, CISA, CISM, CRISC, CEH, CHFI, SEC+, AWS-CCP, AWS-CSA, CCSK, CSM, CSPO, CIGE, CMSC, ITILv4
 
 ---
 [Completed Software Report (Readable PDF)](https://github.com/Triscuit2311/SNHU-Portfolios/blob/main/CS305/CS_305_Project_Two.pdf)
 
 [Completed Software Report (DocX)](https://github.com/Triscuit2311/SNHU-Portfolios/blob/main/CS305/CS_305_Project_Two_Template.docx)
-
 ---
-## Q&A
+
+# TODO:
+
+## Q&A 
 
 ### Briefly summarize your client, Artemis Financial, and their software requirements. Who was the client? What issue did they want you to address?
 
@@ -26,6 +28,5 @@
 ### What resources, tools, or coding practices did you use that might be helpful in future assignments or tasks?
 
 ### Employers sometimes ask for examples of work that you have successfully completed to show your skills, knowledge, and experience. What might you show future employers from this assignment?
-
 
 ---
