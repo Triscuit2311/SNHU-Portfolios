@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="pch">
+      <UniqueIdentifier>{c97be23f-f69b-4402-9ca9-27685fa84c1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules">
+      <UniqueIdentifier>{2fb5fbb7-79c8-4aa4-9979-946c1a1e7c61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\Mesh">
+      <UniqueIdentifier>{186dc60d-8f8a-43f3-8a5f-14e5452dac56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\WindowManager">
+      <UniqueIdentifier>{50a0492c-a80e-4346-8b84-87e55625877f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\Shader">
+      <UniqueIdentifier>{7062950d-e274-4f3a-9275-c7e4d8634b2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\Camera">
+      <UniqueIdentifier>{345bca13-24af-4c22-8403-c8de70c2b2dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="modules\Math">
+      <UniqueIdentifier>{d07f011d-00a5-4841-b512-7cd43cc2757e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>pch</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderProgram.cpp">
+      <Filter>modules\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGlWindowManager.cpp">
+      <Filter>modules\WindowManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>modules\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>modules\Camera</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLConstants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderProgram.h">
+      <Filter>modules\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGlWindowManager.h">
+      <Filter>modules\WindowManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>modules\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>modules\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.h">
+      <Filter>modules\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureHelper.h">
+      <Filter>modules\Shader</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
