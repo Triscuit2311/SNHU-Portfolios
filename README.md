@@ -2,6 +2,9 @@
 
 ## Portfolio Links:
 
+### [CS-360-T5541 Mobile Architect & Programming  (Prof. Jerome DiMarzio)](/CS360)
+
+### [CS-340-T5531 Client/Server Development (Prof. Jeff Sanford)](/CS340)
 
 ### [CS-320-T4205 Software Test Automation & QA  (Prof. Albanie Bolton)](/CS320)
 
