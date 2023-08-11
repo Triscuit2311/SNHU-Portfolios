@@ -2,6 +2,10 @@
 
 ## Portfolio Links:
 
+### [CS-370-X6162 Current/Emerging Trends in CS (Prof. Timothy Alexander)](/CS370)
+
+### [CS-350-X6153 Emerging Sys Arch & Tech (Prof. Megan Allen Black)](/CS350)
+
 ### [CS-360-T5541 Mobile Architect & Programming  (Prof. Jerome DiMarzio)](/CS360)
 
 ### [CS-340-T5531 Client/Server Development (Prof. Jeff Sanford)](/CS340)
