@@ -2,6 +2,8 @@
 
 ## Portfolio Links:
 
+### [CS-470-R3374 Full Stack Development II 24EW3 (Prof. Anna Sandifer)](/CS470)
+
 ### [CS-405-R1910 Secure Coding 23EW1 (Prof. Ahlam Alhweiti, M.S)](/CS405)
 
 ### [CS-370-X6162 Current/Emerging Trends in CS (Prof. Timothy Alexander)](/CS370)
